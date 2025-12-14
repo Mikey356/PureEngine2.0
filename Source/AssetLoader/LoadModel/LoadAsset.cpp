@@ -4,6 +4,8 @@ namespace Engine
 {
 	namespace LoadAsset
 	{
+		std::string Asset::m_directory;
+		MaterialPool::Material* Asset::m_material;
 		Asset::Asset(const std::string& path, bool gamma) : m_gammaCorrection(gamma)
 		{
 			LoadModel(path);

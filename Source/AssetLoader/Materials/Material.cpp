@@ -5,6 +5,8 @@ namespace Engine
 {
 	namespace MaterialPool
 	{
+		std::vector<TexturePool::Texture> Material::m_texturesLoaded;
+		std::vector<MeshPool::Mesh> Material::m_meshes;
 		void Material::ProcessNode(aiNode* node, const aiScene* scene)
 		{
 			for(unsigned int i = 0; i < node->mNumMeshes; i++)

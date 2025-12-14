@@ -7,6 +7,7 @@ namespace Engine
 		unsigned int  Mesh::m_VAO;
 		unsigned int  Mesh::m_VBO;
 		unsigned int  Mesh::m_EBO;
+		std::vector<unsigned int> Mesh::m_indices;
 		Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<unsigned int>& indices)
 		{
 			m_vertices = vertices;
