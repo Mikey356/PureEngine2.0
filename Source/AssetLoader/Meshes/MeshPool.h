@@ -29,9 +29,9 @@ namespace Engine
 			std::vector<Vertex> m_vertices;
 			static std::vector<unsigned int> m_indices;
 		
-			inline static unsigned int m_VBO;
-			inline static unsigned int m_EBO;
-			inline static unsigned int m_VAO;
+			 static unsigned int m_VBO;
+			static unsigned int m_EBO;
+			static unsigned int m_VAO;
 			Mesh(std::vector<Vertex>& vertices, std::vector<unsigned int>& indices);
 
 
