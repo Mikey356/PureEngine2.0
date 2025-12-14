@@ -13,10 +13,7 @@
 #define MAX_BONE_INFLUENCE 4
 
 #endif 
-#ifndef BUFFERS
-#define BUFFERS
-unsigned int VBO, VAO, EBO;
-#endif
+
 
 
 namespace Engine
