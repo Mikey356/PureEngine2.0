@@ -18,15 +18,15 @@ namespace Engine
 		void Mesh::GenMesh()
 		{
 			
-			glGenVertexArrays(1, &m_VAO);
-			glGenBuffers(1, &m_VBO);
-			glGenBuffers(1, &m_EBO);
+			glGenVertexArrays(1, &Mesh::m_VAO);
+			glGenBuffers(1, &Mesh::m_VBO);
+			glGenBuffers(1, &Mesh::m_EBO);
 
-			glBindVertexArray(m_VAO);
-			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+			glBindVertexArray(Mesh::m_VAO);
+			glBindBuffer(GL_ARRAY_BUFFER, Mesh::m_VBO);
 			glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(Vertex), &m_vertices[0], GL_STATIC_DRAW);
-			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
-			glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), &m_indices[0], GL_STATIC_DRAW);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Mesh::m_EBO);
+			glBufferData(GL_ELEMENT_ARRAY_BUFFER, Mesh::m_indices.size() * sizeof(unsigned int), &Mesh::m_indices[0], GL_STATIC_DRAW);
 
 			glEnableVertexAttribArray(0);
 			glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
